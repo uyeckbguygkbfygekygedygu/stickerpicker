@@ -6,7 +6,7 @@ from . import __version__
 
 cmd_env = {
     "PATH": os.environ["PATH"],
-    "HOME": os.environ["HOME"],
+    "HOME": os.environ.get("HOME", os.environ["USERPROFILE"]),
     "LANG": "C",
     "LC_ALL": "C",
 }
